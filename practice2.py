@@ -60,29 +60,4 @@ class Classroom:
                 print("Invalid value, try again!")
 
     def list(self):
-        print(f"There are {len(self.courses)} course(s) include:")
-        for course in self.courses:
-            print(course.name)
-
-        print(f"There are {len(self.students)} student(s) include:")
-        for student in self.students:
-            print(student.name)
-
-        while True:
-            course_name = input("Choose a course: ")
-            course_found = False
-            for course in self.courses:
-                if course.name == course_name:
-                    course_found = True
-                    break
-            if not course_found:
-                print("Invalid course name, try again!")
-                continue
-            for mark in self.marks:
-                if mark.course.name == course_name:
-                    print(f"Mark of {mark.student.name} in {mark.course.name} is {mark.value}")
-
-if __name__ == '__main__':
-    classroom = Classroom()
-    classroom.input()
-    classroom.list()
+        print(f"There are {len(self.courses)} course(s)
